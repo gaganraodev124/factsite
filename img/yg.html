@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="gagan" placeholder="">
+    <input type="number" id="gagan1" placeholder=""> 
+    <select id="gagan3">
+        <option>Select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <button type="button" onclick="calculate()">calc</button>
+    <h2>calculate total amount :<span id="total"></span></h2>
+    <script>
+function calculate(){
+    debugger
+    var totalamount = 0;
+var gagan = document.getElementById('gagan').value;
+var gagan1 = document.getElementById('gagan1').value;
+var gagan3 =document.getElementById('gagan3').value;
+var gaganint= parseInt(gagan);
+var gaganint1= parseInt(gagan1);
+if("+"==gagan3){
+    totalamount= gaganint+gaganint1;
+} 
+else if("-"==gagan3){
+    totalamount= gaganint-gaganint1;
+}
+else if("*"==gagan3){
+    totalamount= gaganint*gaganint1;
+}                                        
+else if("/"==gagan3){
+    totalamount= gaganint/gaganint1;
+}
+else{
+    alert("Input invalid");
+}
+document.getElementById('total').innerHTML=totalamount
+
+}
+    </script>
+
+    
+</body>
+</html>
